@@ -9,11 +9,14 @@
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCcPFcbAjIsgXGQwE-A3AcOXkeD40qypE8",
-    authDomain: "train-times-93583.firebaseapp.com",
-    databaseURL: "https://train-times-93583.firebaseio.com",
-    storageBucket: "train-times-93583.appspot.com"
-  };
+  apiKey: "AIzaSyCK6QOL5QInlsO_ldQFshPhJ4z3RZj0_J4",
+  authDomain: "train-times-a1e6b.firebaseapp.com",
+  databaseURL: "https://train-times-a1e6b.firebaseio.com",
+  projectId: "train-times-a1e6b",
+  storageBucket: "",
+  messagingSenderId: "647603121881",
+  appId: "1:647603121881:web:0c2d1abfbeac67ae"
+};
   
   firebase.initializeApp(config);
   
