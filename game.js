@@ -92,13 +92,10 @@ var config = {
       tArrival = trainTime.format("hh:mm A");
       tMinutes = trainTime.diff(moment(), "minutes");
     } else {
-      // Calculate the minutes until arrival using hardcore math
-      // To calculate the minutes till arrival, take the current time in unix subtract the FirstTrain time
-      // and find the modulus between the difference and the frequency.
+
       var differenceTimes = moment().diff(trainTime, "minutes");
       var tRemainder = differenceTimes % tFrequency;
       tMinutes = tFrequency - tRemainder;
-      // To calculate the arrival time, add the tMinutes to the current time
       tArrival = moment()
         .add(tMinutes, "m")
         .format("hh:mm A");
@@ -106,7 +103,7 @@ var config = {
     console.log("tMinutes:", tMinutes);
     console.log("tArrival:", tArrival);
   
-    // Add each train's data into the table
+
     $("#train-table > tbody").append(
       $("<tr>").append(
         $("<td>").text(tName),
